@@ -1,0 +1,51 @@
+.navbar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: #212336;
+  color: #fff;
+}
+
+.navLogo {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.navLogo span {
+  color: #ff4b58;
+}
+
+.navItems {
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  column-gap: 20px;
+}
+
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .menu {
+    display: block;
+  }
+  .navItems {
+    flex-direction: column;
+    background-color: #212336;
+    height: 250px;
+    width: 100vw;
+    position: absolute;
+    top: -250px;
+    left: 0px;
+    justify-content: space-around;
+    align-items: center;
+    transition: top 0.2s linear;
+  z-index: 0;
+  }
+  .navLogo{
+    z-index: 1;
+  }
+}

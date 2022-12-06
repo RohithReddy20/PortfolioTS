@@ -1,0 +1,25 @@
+/* #FF4B58 */
+/* font-family: 'Manrope', sans-serif;
+font-family: 'Nerko One', cursive;
+font-family: 'Rubik Distressed', cursive;
+font-family: 'Work Sans', sans-serif; 
+
+#ff4a57
+#23263a
+*/
+
+.App {
+  text-align: center;
+  background-color: #23263a;
+  font-family: 'Work Sans', sans-serif;
+}
+
+html,
+body,
+* {
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}

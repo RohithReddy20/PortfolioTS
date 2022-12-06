@@ -1,0 +1,37 @@
+.LNG {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: rotate(90deg);
+}
+
+.LNG>a {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #23263a;
+    color: transparent;
+    margin: 5px 0;
+    z-index: 1;
+    border: 2px solid #ff4a57;
+    transition: all 0.2s linear;
+}
+
+.active {
+    background-color: #ff4a57 !important;
+}
+
+.line {
+    color: transparent;
+    background: #fff;
+    width: inherit;
+    position: absolute;
+    height: 2px;
+}
+
+@media screen and (max-width: 700px) {
+    .LNG {
+        display: none;
+    }
+}

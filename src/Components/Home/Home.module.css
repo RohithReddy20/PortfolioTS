@@ -1,0 +1,57 @@
+.home {
+    color: #fff;
+    display: flex;
+    min-height: 400px;
+    width: min(100%, 1200px);
+    padding: 60px 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.title {
+    font-size: 4rem;
+}
+
+.note {
+    font-size: 2rem;
+}
+
+.connect {
+    background-color: #ff4a57;
+    height: 60px;
+    width: 200px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 5px;
+    transition: transform 0.2s linear;
+}
+
+.connect:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 700px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .note {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .title {
+        font-size: 40px;
+    }
+}
