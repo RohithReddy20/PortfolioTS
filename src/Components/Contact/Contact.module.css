@@ -47,6 +47,16 @@
     outline: none;
 }
 
+.submit{
+    height: 50px;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4a57;
+    font-size: 20px;
+    color: #fff;
+}
+
 @media screen and (max-width: 700px) {
     .contactForm form{
         align-items: center;
