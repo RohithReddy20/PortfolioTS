@@ -17,6 +17,7 @@ export default function Contact() {
           <input type="text" placeholder="Name" className={styles.name} />
           <input type="email" placeholder="Email" className={styles.email} />
           <textarea placeholder="Message" className={styles.message} ></textarea>
+          <button className={styles.submit}>Submit</button>
         </form>
       </div>
         <LineNavigator />

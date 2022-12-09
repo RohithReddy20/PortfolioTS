@@ -1,0 +1,88 @@
+.projects{
+    display: flex;
+    min-height: 400px;
+    width: min(100%, 1200px);
+    padding: 60px 30px;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.header{
+    color: #ff4a57;
+    font-size: 30px;
+    font-weight: 800;
+}
+.note{
+    color: #fff;
+    font-size: 18px;
+}
+
+.header, .note{
+    margin: 5px 0 20px 0;
+    text-align: left;
+}
+
+.projectsList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project{
+    width: min(300px,100%);
+    padding: 10px;
+    text-align: left;
+    background-color: #848191;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project img{
+    width: 95%;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.project h4{
+    color: #ff4a57;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px 0 0 0;
+}
+
+.project p{
+    color: #fff;
+    font-size: 18px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    
+}
+
+.buttons button{
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.buttons button:first-child{
+    background-color: #ff4a57;
+    margin-right: 10px;
+}
+
+.buttons button:last-child{
+    border: 2px solid #ff4a57;
+    background-color: transparent;
+}
