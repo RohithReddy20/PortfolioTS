@@ -1,0 +1,57 @@
+
+.footer { 
+    color: #fff; 
+    display: flex; 
+    justify-content: space-around; 
+    padding: 60px 0; 
+    align-items: center; 
+    border-bottom: 1px solid #fff; 
+    border-top: 1px solid #fff; 
+    flex-wrap: wrap;
+} 
+
+.navLogo { 
+    font-size: 40px; 
+    font-weight: 800; 
+    min-width: 250px;
+} 
+
+.communication { 
+    display: flex; 
+    flex-direction: column; 
+    text-align: left; 
+    grid-gap: 20px; 
+    gap: 20px;
+} 
+
+.navLogo span  { 
+    color: #ff4b58;
+} 
+
+.socialMedia{ 
+    display: flex; 
+    grid-gap: 20px; 
+    gap: 20px; 
+    align-items: center;
+} 
+
+.address div  { 
+    display: flex; 
+    align-items: center; 
+    grid-gap: 10px; 
+    gap: 10px; 
+    margin: 15px 0;
+} 
+
+.communication img  { 
+    width: 40px; 
+    height: 40px;
+} 
+
+
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: rgb(204, 202, 202);
+}
