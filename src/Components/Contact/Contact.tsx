@@ -18,6 +18,7 @@ export default function Contact() {
     email: "",
     message: "",
   }) as [mailState, (mailState: mailState) => void];
+  const [sending, setSending] = useState<boolean>(false);
 
   const handleMailStateChange = (
     e:
@@ -35,37 +36,74 @@ export default function Contact() {
 
   const submitEmail = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    console.log({ mailerState });
-    const response = await fetch("https://7f9mvb-3001.pitcher-staging.csb.dev/send", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify({ mailerState }),
-    })
+    // console.log({ mailerState });
+    setSending(true);
+    const response = await fetch(
+      "https://7f9mvb-3001.pitcher-staging.csb.dev/send",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({ mailerState }),
+      }
+    )
       .then((res) => res.json())
-      .then(() => {
+      .then((res) => {
+        if (res.status === "EMPTY") {
+          alert("Please fill out all fields");
+          setSending(false);
+          return;
+        }
         setMailerState({
           email: "",
           name: "",
           message: "",
         });
-        console.log("success")
-      }).catch((err) => {
+        setSending(false);
+        console.log("success");
+      })
+      .catch((err) => {
         console.log(err);
+        setSending(false);
       });
   };
 
-  
   return (
     <div id="contact" className={styles.contact}>
       <div className={styles.contactForm}>
         <div className={styles.title}>Connect With Me</div>
         <form action="">
-          <input type="text" placeholder="Name" name="name" value={mailerState.name} onChange={handleMailStateChange} className={styles.name} />
-          <input type="email" placeholder="Email" name="email" value={mailerState.email} onChange={handleMailStateChange} className={styles.email} />
-          <textarea placeholder="Message" name="message" value={mailerState.message} onChange={handleMailStateChange} className={styles.message}></textarea>
-          <button className={styles.submit} onClick={submitEmail}>Submit</button>
+          <input
+            type="text"
+            placeholder="Name"
+            name="name"
+            value={mailerState.name}
+            onChange={handleMailStateChange}
+            className={styles.name}
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            value={mailerState.email}
+            onChange={handleMailStateChange}
+            className={styles.email}
+          />
+          <textarea
+            placeholder="Message"
+            name="message"
+            value={mailerState.message}
+            onChange={handleMailStateChange}
+            className={styles.message}
+          ></textarea>
+          <button
+            disabled={sending}
+            className={styles.submit}
+            onClick={submitEmail}
+          >
+            {sending ? "Sending..." : "Send"}
+          </button>
         </form>
       </div>
       <div>
