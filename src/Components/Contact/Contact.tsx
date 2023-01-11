@@ -38,16 +38,13 @@ export default function Contact() {
     e.preventDefault();
     // console.log({ mailerState });
     setSending(true);
-    const response = await fetch(
-      "https://7f9mvb-3001.pitcher-staging.csb.dev/send",
-      {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({ mailerState }),
-      }
-    )
+    const response = await fetch("https://z9btxo-3001.preview.csb.app/send", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ mailerState }),
+    })
       .then((res) => res.json())
       .then((res) => {
         if (res.status === "EMPTY") {
