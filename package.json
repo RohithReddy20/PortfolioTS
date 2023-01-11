@@ -40,6 +40,9 @@
     "react": "react-scripts start",
     "start": "concurrently \"npm run dev\" \"npm run react\""
   },
+  "engines":{
+    "node":"16.x"
+  },
   "browserslist": [
     ">0.2%",
     "not dead",
