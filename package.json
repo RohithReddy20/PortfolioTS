@@ -41,7 +41,7 @@
     "start": "concurrently \"npm run dev\" \"npm run react\""
   },
   "engines":{
-    "node":"16.x"
+    "node":"18.12.1"
   },
   "browserslist": [
     ">0.2%",
