@@ -38,7 +38,7 @@ export default function Contact() {
     e.preventDefault();
     // console.log({ mailerState });
     setSending(true);
-    const response = await fetch("https://z9btxo-3001.preview.csb.app/send", {
+    const response = await fetch("https://rohithexpressserver.vercel.app/send", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
