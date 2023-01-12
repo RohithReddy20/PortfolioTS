@@ -14,7 +14,10 @@ function Navbar(): ReactElement {
   const [openNav, setOpenNav] = useState<boolean>(true);
 
   const handleClick = () => {
-    const el = document.querySelector(`.${styles.navItems}`) as HTMLElement;
+    const el = document.getElementsByClassName(
+      styles.navItems
+    )[0] as HTMLElement;
+    // console.log(el);
     if (openNav) {
       el.style.top = "59px";
     } else {
@@ -28,11 +31,39 @@ function Navbar(): ReactElement {
       <div className={styles.navLogo}>
         C<span>R</span>R
       </div>
-      <div className={styles.navItems}>
-        <div className={styles.navItem}>Home</div>
-        <div className={styles.navItem}>Skills</div>
-        <div className={styles.navItem}>Projects</div>
-        <div className={styles.navItem}>Contact</div>
+      <div onClick={handleClick} className={styles.navItems}>
+        <div
+          onClick={() => {
+            document.getElementById("home")?.scrollIntoView();
+          }}
+          className={styles.navItem}
+        >
+          Home
+        </div>
+        <div
+          onClick={() => {
+            document.getElementById("skills")?.scrollIntoView();
+          }}
+          className={styles.navItem}
+        >
+          Skills
+        </div>
+        <div
+          onClick={() => {
+            document.getElementById("projects")?.scrollIntoView();
+          }}
+          className={styles.navItem}
+        >
+          Projects
+        </div>
+        <div
+          onClick={() => {
+            document.getElementById("contact")?.scrollIntoView();
+          }}
+          className={styles.navItem}
+        >
+          Contact
+        </div>
       </div>
       <div className={styles.menu}>
         <Button onClick={handleClick} color="inherit">
