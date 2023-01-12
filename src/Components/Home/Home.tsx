@@ -17,7 +17,16 @@ export default function Home() {
           Passionate about building great Websites with professional and elegant
           user interfaces.{" "}
         </div>
-        <button className={styles.connect}>Let's Connect</button>
+        <button
+          onClick={() => {
+            document
+              .getElementById("contact")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className={styles.connect}
+        >
+          Let's Connect
+        </button>
       </div>
       <div className={styles.navigator}>
         <LineNavigator section="home" />

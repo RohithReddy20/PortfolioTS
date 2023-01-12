@@ -97,3 +97,9 @@
     width: 110%;
   }
 }
+
+@media screen and (max-width:669px){
+  .projectsList{
+    justify-content: center;
+  }
+}
