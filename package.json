@@ -36,12 +36,7 @@
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "dev": "node server.js",
-    "react": "react-scripts start",
-    "start": "concurrently \"npm run dev\" \"npm run react\""
-  },
-  "engines":{
-    "node":"18.12.1"
+    "start": "react-scripts start",
   },
   "browserslist": [
     ">0.2%",
