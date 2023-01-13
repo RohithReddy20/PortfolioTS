@@ -4,10 +4,14 @@ import styles from "./Projects.module.css";
 import alphare from "../../images/alpahre.jpeg";
 import ngan from "../../images/nganpf.png";
 import swoop from "../../images/swoopL.jpeg";
-import LineNavigator from "../LineNavigator/LineNavigator";
+// import LineNavigator from "../LineNavigator/LineNavigator";
+// import Card from "./Card/Card";
+// import { props as Cp } from "./Card/Card";
 // import { ListProps } from '@mui/material';
 // import swoopDashboard from "../../images/swoop.png";
 type Props = {};
+
+// const hexas: string[] = ["#1D1148", "#FFCD00", "#FF5041"];
 
 interface ProjectsType {
   image: string;
@@ -38,7 +42,6 @@ const projects: ProjectsType[] = [
   {
     image: swoop,
     title: "Swoop",
-    // rewrite Swoop World's first Web 3.0 fantasy cricket app. Try out brand new experience of playing fantasy sports on Web 3.0
     description:
       "Swoop World's first Web 3.0 fantasy cricket app. It's a new experience of playing fantasy sports on Web 3.0",
     github: "https://github.com/RohithReddy20/swoop",
@@ -56,15 +59,25 @@ function Projects({}: Props) {
           Developer, here are a few of my live, real-world projects
         </div>
         <div className={styles.projectsList}>
-          {/* <Project /><Project /><Project /><Project /><Project /><Project /> */}
           {projects.map((project, index) => {
-            return <Project key={index} {...project} />;
+            return (
+              <>
+                <Project key={index} {...project} />
+                {/* <Card
+                  key={index}
+                  hexa={hexas[index]}
+                  image={project.image}
+                  title={project.title}
+                  description={project.description}
+                /> */}
+              </>
+            );
           })}
         </div>
       </div>
-      <div>
+      {/* <div>
         <LineNavigator section="projects" />
-      </div>
+      </div> */}
     </section>
   );
 }

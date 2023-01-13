@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import LineNavigator from "../LineNavigator/LineNavigator";
+// import LineNavigator from "../LineNavigator/LineNavigator";
 import styles from "./Contact.module.css";
 
 // export interface IContactProps {
@@ -103,9 +103,9 @@ export default function Contact() {
           </button>
         </form>
       </div>
-      <div>
+      {/* <div>
         <LineNavigator section="contact" />
-      </div>
+      </div> */}
     </div>
   );
 }

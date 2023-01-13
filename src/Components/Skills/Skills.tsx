@@ -84,9 +84,9 @@ export default function Skills() {
           </div>
         </div>
       </div>
-      <div className={styles.navigator}>
+      {/* <div className={styles.navigator}>
         <LineNavigator section="skills" />
-      </div>
+      </div> */}
     </div>
   );
 }
