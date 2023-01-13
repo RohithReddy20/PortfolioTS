@@ -1,32 +1,46 @@
+:root {
+  --primary-color: #28404F;
+  --secondary-color: #848191;
+  --white-color: #fff;
+  --bg: #2bbbb2;
+  --red: #ff4a57;
+}
+
+
 .projects {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .projectsSection {
   display: flex;
   min-height: 400px;
   width: min(100%, 1200px);
-  padding: 60px 30px;
+  padding: 30px;
   justify-content: center;
   margin: 0 auto;
   align-items: center;
+  background: var(--red);
 }
 
 .header {
-  color: #ff4a57;
-  font-size: 30px;
+  color: var(--primary-color);
+  font-size: 40px;
   font-weight: 800;
 }
+
 .note {
   color: #fff;
   font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .header,
 .note {
   margin: 5px 0 20px 0;
-  text-align: left;
+  /*   text-align: left; */
 }
 
 .projectsList {
@@ -35,6 +49,7 @@
   flex-wrap: wrap;
   grid-gap: 10px;
   gap: 10px;
+  justify-content: space-around;
 }
 
 .project {
@@ -54,7 +69,7 @@
 }
 
 .project h4 {
-  color: #ff4a57;
+  color: var(--primary-color);
   font-size: 24px;
   font-weight: 600;
   margin: 10px 0 0 0;
@@ -83,23 +98,23 @@
 }
 
 .buttons button:first-child {
-  background-color: #ff4a57;
+  background-color: var(--primary-color);
   margin-right: 10px;
 }
 
 .buttons button:last-child {
-  border: 2px solid #ff4a57;
+  border: 2px solid var(--primary-color);
   background-color: transparent;
 }
 
-@media screen and (min-width: 700px) {
+/* @media screen and (min-width: 700px) {
   .projectsList {
     width: 110%;
   }
-}
+} */
 
-@media screen and (max-width:669px){
-  .projectsList{
+@media screen and (max-width:669px) {
+  .projectsList {
     justify-content: center;
   }
 }

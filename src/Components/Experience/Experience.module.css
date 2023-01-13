@@ -1,0 +1,58 @@
+.experience {
+    padding: 30px 60px;
+    text-align: left;
+    background-color: #F6F6F4;
+    margin-top: 30px;
+}
+
+.experience h2 {
+    color: #28404F;
+    font-size: 40px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .experience {
+        padding: 30px 30px;
+    }
+}
+
+/*experience card*/
+
+.experienceCard {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    max-width: 700px;
+}
+
+.experienceCard>.timePeriod {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.experienceCard .companyName {
+    font-size: 22px;
+    color: #ff4a57;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.experienceCard .jobTitle {
+    font-size: 16px;
+    color: #28404F;
+    font-weight: 600;
+}
+
+.experienceCard .jobDescription {
+    font-size: 15px;
+    color: #28404F;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.experienceCard ul {
+    list-style-type: square;
+    /* padding-inline-start: 0; */
+}
