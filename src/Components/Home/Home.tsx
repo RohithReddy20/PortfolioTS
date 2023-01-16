@@ -1,8 +1,8 @@
 import React from "react";
-import LineNavigator from "../LineNavigator/LineNavigator";
+// import LineNavigator from "../LineNavigator/LineNavigator";
 import styles from "./Home.module.css";
 import homeLogo from "../../images/loto_a.png";
-import homePng from "../../images/home.gif";
+import homePng from "../../images/home.png";
 import About from "./About";
 
 // export interface IAppProps {
@@ -19,7 +19,7 @@ export default function Home() {
             <img src={homeLogo} alt="logo" />
           </div>
           <div className={styles.title}>
-            <div className={styles.name}>ROHITH REDDY</div>
+            <h1 className={styles.name}>ROHITH REDDY</h1>
             Full Stack Web Developer
           </div>
           {/* <div className={styles.note}>
