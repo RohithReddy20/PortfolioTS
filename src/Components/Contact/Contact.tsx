@@ -38,6 +38,11 @@ export default function Contact() {
     e.preventDefault();
     // console.log({ mailerState });
     setSending(true);
+    if (!mailerState.name || !mailerState.email || !mailerState.message) {
+      alert("Please fill out all fields");
+      setSending(false);
+      return;
+    }
     const response = await fetch("https://expro.onrender.com/send", {
       method: "POST",
       headers: {

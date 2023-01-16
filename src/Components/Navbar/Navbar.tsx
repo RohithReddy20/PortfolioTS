@@ -4,6 +4,8 @@ import styles from "./Navbar.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button/Button";
 import CloseIcon from "@mui/icons-material/Close";
+import About from "../Home/About";
+import Experience from "../Experience/Experience";
 
 // type NavbarProps = {
 //     name: string;
@@ -39,6 +41,22 @@ function Navbar(): ReactElement {
           className={styles.navItem}
         >
           Home
+        </div>
+        {/* <div
+          onClick={() => {
+            document.getElementById("about")?.scrollIntoView();
+          }}
+          className={styles.navItem}
+        >
+          About
+        </div> */}
+        <div
+          onClick={() => {
+            document.getElementById("experience")?.scrollIntoView();
+          }}
+          className={styles.navItem}
+        >
+          Experience
         </div>
         <div
           onClick={() => {

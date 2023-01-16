@@ -7,7 +7,7 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <div className={styles.about}>
+    <section id="about" className={styles.about}>
       <img src={aboutPng} alt="about" />
       <h2 className={styles.header}>About Me</h2>
       <h3>
@@ -24,7 +24,7 @@ const About = (props: Props) => {
       <a href={Resume} download="Resume.pdf">
         Download My Resume
       </a>
-    </div>
+    </section>
   );
 };
 
