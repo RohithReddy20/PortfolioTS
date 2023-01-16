@@ -87,7 +87,7 @@ function App() {
     // clearTimeout(endScroll);
     const endScroll: NodeJS.Timeout = setTimeout(() => {
       setShowArrow(false);
-      console.log("scrolling stopped");
+      // console.log("scrolling stopped");
     }, 2000);
     return () => {
       window.removeEventListener("scroll", handleScroll);
