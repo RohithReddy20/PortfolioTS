@@ -45,7 +45,7 @@ const experiences: ExperienceCardType[] = [
 
 const Experience = (props: Props) => {
   return (
-    <section className={styles.experience}>
+    <section id="experience" className={styles.experience}>
       <img src={expLogo} alt="experience" />
       <h2>Experience</h2>
       <div className={styles.experienceCards}>
