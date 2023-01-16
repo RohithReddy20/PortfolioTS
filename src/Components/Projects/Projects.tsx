@@ -62,7 +62,7 @@ function Projects({}: Props) {
           {projects.map((project, index) => {
             return (
               <>
-                <Project key={index} {...project} />
+                <Project key={`project${index}`} {...project} />
                 {/* <Card
                   key={index}
                   hexa={hexas[index]}

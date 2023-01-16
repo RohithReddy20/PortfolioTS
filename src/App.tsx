@@ -1,14 +1,17 @@
-import React, { ReactEventHandler, useEffect, useState } from "react";
+import React, { ReactEventHandler, useEffect, useState, Suspense } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
 import Skills from "./Components/Skills/Skills";
 import Contact from "./Components/Contact/Contact";
-import Projects from "./Components/Projects/Projects";
+// import Projects from "./Components/Projects/Projects";
 import Footer from "./Components/Footer/Footer";
 import Experience from "./Components/Experience/Experience";
 import UpArrow from "./Components/UpArrow/UpArrow";
+// import { height } from "@mui/system";
+
+const Projects = React.lazy(() => import("./Components/Projects/Projects"));
 
 // import { ArrowUpwardOutlined } from "@mui/icons-material";
 // import upArrow from "./images/arrow-up.svg";
@@ -33,7 +36,21 @@ function App() {
                 <Home />
                 <Experience />
                 <Skills />
-                <Projects />
+                <Suspense
+                  fallback={
+                    <div
+                      style={{
+                        height: "100px",
+                        fontSize: "35px",
+                        color: "#fff",
+                      }}
+                    >
+                      Loading...
+                    </div>
+                  }
+                >
+                  <Projects />
+                </Suspense>
                 <Contact />
                 <Footer />
                 {/* <img
